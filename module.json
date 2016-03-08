@@ -1,5 +1,5 @@
 {
-  "name": "mbed-ethernet-sample",
+  "name": "mbed-ethernet-sample-kone",
   "version": "1.0.6",
   "bin": "./source",
   "private": true,
