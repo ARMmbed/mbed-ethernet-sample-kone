@@ -9,7 +9,7 @@
   "dependencies": {
     "mbed-client": "^1.2.16",
     "mbed-connector-interface": "^1.1.53",
-    "mbed-endpoint-network-eth": "^1.0.15",
+    "mbed-endpoint-network-eth": "^1.0.16",
     "fxos8700cq": "^0.1.5"
   }
 }
