@@ -96,11 +96,29 @@ Connector::Options *configure_endpoint(Connector::OptionsBuilder &config)
                  .build();
 }
 
+extern "C" void mbed_mac_address(char *s) 
+{
+    char mac[6];
+    mac[0] = 0xe6;
+    mac[1] = 0xe2;
+    mac[2] = 0x67;
+    mac[3] = 0xf4;
+    mac[4] = 0xa6;
+    mac[5] = 0xdb;
+ 
+    if (s != NULL) memcpy(s, mac, 6);
+}
+
+static char mmac[6];
+
 // main entry point...
 void app_start(int, char *[])
 {
 	// set Serial
 	pc.baud(115200);
+	
+	// MAC address handling
+    mbed_mac_address(mmac);
 	
     // Announce
     logger.log("\r\n\r\nmbed mDS Sample Endpoint v3.0 (Ethernet)");
@@ -111,3 +129,4 @@ void app_start(int, char *[])
     // starts the endpoint by finalizing its configuration (configure_endpoint() above called),creating a Thread and reading NSP events...
     Connector::Endpoint::start();
 }
+
