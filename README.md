@@ -1,4 +1,4 @@
-mbedConnectorInteface endpoint example with Device Management (Ethernet)
+mbedConnectorInteface endpoint example for KONE (Ethernet)
 
 You will need to replace the contents of security.h with yours. 
 
@@ -6,9 +6,11 @@ You can import this project into the online IDE at https://developer.mbed.org
 
  - Right-click on "My Project"
 
- - Select import by "URL" 
+ - Select import "from URL" 
 
  - Enter the following URL: https://github.com/ARMmbed/mbed-ethernet-sample-kone
+
+ - DO NOT SELECT "Update all libraries"... ensure that remains UNCHECKED 
  
 To compile locally, you need to install "mbed-cli"
 
