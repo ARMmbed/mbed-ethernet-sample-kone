@@ -71,3 +71,4 @@ public:
 
 #endif // __LIGHT_RESOURCE_H__
 
+
